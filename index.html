@@ -242,7 +242,7 @@
         .product-image {
             width: 100%;
             height: 240px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: #25d366;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -454,6 +454,171 @@
         .add-to-cart-large:hover {
             background-color: #e55a25;
             transform: translateY(-2px);
+        }
+
+        /* 360 VIEW BUTTON */
+        .view-360-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .view-360-btn:hover {
+            background-color: white;
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image {
+            position: relative;
+        }
+
+        /* 360 VIEW MODAL */
+        .view-360-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .view-360-modal.active {
+            display: flex;
+        }
+
+        .view-360-container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .view-360-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .view-360-close:hover {
+            background-color: var(--neutral-light);
+            transform: rotate(90deg);
+        }
+
+        .view-360-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .view-360-viewer {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: grab;
+            user-select: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .view-360-viewer:active {
+            cursor: grabbing;
+        }
+
+        .view-360-viewer-content {
+            font-size: 5rem;
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+        }
+
+        .view-360-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .view-360-control-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .view-360-control-btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .view-360-control-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .view-360-info {
+            margin-top: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* CART 360 VIEW BUTTON */
+        .cart-360-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-left: 0.5rem;
+        }
+
+        .cart-360-btn:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.05);
         }
 
         /* CART PAGE */
@@ -668,6 +833,50 @@
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
                 gap: 1rem;
             }
+
+            .view-360-container {
+                width: 95%;
+                padding: 1rem;
+            }
+
+            .view-360-viewer {
+                height: 300px;
+            }
+
+            .view-360-viewer-content {
+                font-size: 4rem;
+            }
+
+            .view-360-title {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .view-360-controls {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .view-360-control-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .view-360-info {
+                font-size: 0.8rem;
+            }
+
+            .view-360-btn {
+                padding: 0.4rem 0.6rem;
+                font-size: 1rem;
+            }
+
+            .cart-360-btn {
+                display: block;
+                margin-top: 0.5rem;
+                margin-left: 0;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -773,7 +982,10 @@
             <h3 style="color: var(--text-primary); margin: 2rem 0 1rem 0; font-size: 1.5rem;">👕 Tracksuits</h3>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(1)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">Tracksuit</div>
                         <div class="product-name">Classic Tracksuit Set</div>
@@ -785,7 +997,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(2)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">Tracksuit</div>
                         <div class="product-name">Performance Tracksuit</div>
@@ -797,7 +1012,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(3)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">Tracksuit</div>
                         <div class="product-name">Premium Track Set</div>
@@ -809,7 +1027,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(3)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">Tracksuit</div>
                         <div class="product-name">Premium Track Set</div>
@@ -821,7 +1042,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(3)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">Tracksuit</div>
                         <div class="product-name">Premium Track Set</div>
@@ -837,7 +1061,10 @@
             <h3 style="color: var(--text-primary); margin: 2rem 0 1rem 0; font-size: 1.5rem;">🩳 Lowers</h3>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-image">🩳</div>
+                    <div class="product-image">
+                        🩳
+                        <button class="view-360-btn" onclick="open360View(4)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">Lowers</div>
                         <div class="product-name">Sports Shorts</div>
@@ -849,7 +1076,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🩳</div>
+                    <div class="product-image">
+                        🩳
+                        <button class="view-360-btn" onclick="open360View(5)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">Lowers</div>
                         <div class="product-name">Training Pants</div>
@@ -861,7 +1091,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🩳</div>
+                    <div class="product-image">
+                        🩳
+                        <button class="view-360-btn" onclick="open360View(6)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">Lowers</div>
                         <div class="product-name">Premium Leggings</div>
@@ -877,7 +1110,10 @@
             <h3 style="color: var(--text-primary); margin: 2rem 0 1rem 0; font-size: 1.5rem;">👔 T-Shirts</h3>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(7)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">T-Shirt</div>
                         <div class="product-name">Basic Sportswear Tee</div>
@@ -889,7 +1125,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(8)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">T-Shirt</div>
                         <div class="product-name">Performance Tee</div>
@@ -901,7 +1140,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(9)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">T-Shirt</div>
                         <div class="product-name">Premium Sports Shirt</div>
@@ -913,7 +1155,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(9)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">T-Shirt</div>
                         <div class="product-name">Premium Sports Shirt</div>
@@ -925,7 +1170,10 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
+                    <div class="product-image">
+                        👕
+                        <button class="view-360-btn" onclick="open360View(9)" title="360° View">🔄</button>
+                    </div>
                     <div class="product-info">
                         <div class="product-category">T-Shirt</div>
                         <div class="product-name">Premium Sports Shirt</div>
@@ -975,6 +1223,25 @@
             <div id="cartContent"></div>
         </section>
     </main>
+
+    <!-- 360 VIEW MODAL -->
+    <div class="view-360-modal" id="view360Modal">
+        <div class="view-360-container">
+            <button class="view-360-close" onclick="close360View()">&times;</button>
+            <h3 class="view-360-title" id="view360Title">360° Product View</h3>
+            <div class="view-360-viewer" id="view360Viewer">
+                <div class="view-360-viewer-content" id="view360Content">👕</div>
+            </div>
+            <div class="view-360-controls">
+                <button class="view-360-control-btn" onclick="rotate360View('left')">◀ Previous</button>
+                <button class="view-360-control-btn" onclick="autoRotate360View()" id="autoRotateBtn">▶ Auto Rotate</button>
+                <button class="view-360-control-btn" onclick="rotate360View('right')">Next ▶</button>
+            </div>
+            <div class="view-360-info">
+                Drag the image or use buttons to rotate • Click outside to close
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -1141,7 +1408,7 @@
                 total += subtotal;
                 tableHTML += `
                     <tr>
-                        <td>${item.name}</td>
+                        <td>${item.name} <button class="cart-360-btn" onclick="open360View(${item.id})">🔄 360° View</button></td>
                         <td>$${item.price.toFixed(2)}</td>
                         <td>${item.quantity}</td>
                         <td>$${subtotal.toFixed(2)}</td>
@@ -1199,6 +1466,149 @@
             
             const whatsappURL = `https://wa.me/${phone}?text=${message}`;
             window.open(whatsappURL, '_blank');
+        }
+
+        // 360 VIEW FUNCTIONALITY
+        let current360ProductId = null;
+        let current360Rotation = 0;
+        let autoRotateInterval = null;
+        const rotationSteps = 36; // 36 steps for 360 degrees (10 degrees per step)
+
+        function open360View(productId) {
+            current360ProductId = productId;
+            current360Rotation = 0;
+            const product = products[productId];
+            
+            // Get emoji based on product category
+            const emoji = productId <= 3 ? '👕' : productId <= 6 ? '🩳' : '👕';
+            
+            document.getElementById('view360Content').textContent = emoji;
+            document.getElementById('view360Title').textContent = `${product.name} - 360° View`;
+            document.getElementById('view360Modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            update360ViewRotation();
+            stopAutoRotate();
+        }
+
+        function close360View() {
+            document.getElementById('view360Modal').classList.remove('active');
+            document.body.style.overflow = '';
+            stopAutoRotate();
+            current360ProductId = null;
+            current360Rotation = 0;
+        }
+
+        function rotate360View(direction) {
+            if (direction === 'left') {
+                current360Rotation -= 1;
+            } else if (direction === 'right') {
+                current360Rotation += 1;
+            }
+            
+            if (current360Rotation < 0) current360Rotation = rotationSteps - 1;
+            if (current360Rotation >= rotationSteps) current360Rotation = 0;
+            
+            update360ViewRotation();
+        }
+
+        function update360ViewRotation() {
+            const rotationAngle = (current360Rotation / rotationSteps) * 360;
+            const content = document.getElementById('view360Content');
+            content.style.transform = `rotateY(${rotationAngle}deg)`;
+        }
+
+        function autoRotate360View() {
+            const btn = document.getElementById('autoRotateBtn');
+            
+            if (autoRotateInterval) {
+                stopAutoRotate();
+            } else {
+                btn.textContent = '⏸ Stop Rotate';
+                autoRotateInterval = setInterval(() => {
+                    current360Rotation++;
+                    if (current360Rotation >= rotationSteps) current360Rotation = 0;
+                    update360ViewRotation();
+                }, 100);
+            }
+        }
+
+        function stopAutoRotate() {
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+                document.getElementById('autoRotateBtn').textContent = '▶ Auto Rotate';
+            }
+        }
+
+        // Drag to rotate functionality
+        let isDragging = false;
+        let startX = 0;
+        let startRotation = 0;
+
+        const viewer = document.getElementById('view360Viewer');
+        if (viewer) {
+            viewer.addEventListener('mousedown', (e) => {
+                if (!document.getElementById('view360Modal').classList.contains('active')) return;
+                isDragging = true;
+                startX = e.clientX;
+                startRotation = current360Rotation;
+                stopAutoRotate();
+            });
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            
+            const deltaX = e.clientX - startX;
+            const rotationDelta = Math.round(deltaX / 10); // Adjust sensitivity
+            current360Rotation = startRotation + rotationDelta;
+            
+            while (current360Rotation < 0) current360Rotation += rotationSteps;
+            while (current360Rotation >= rotationSteps) current360Rotation -= rotationSteps;
+            
+            update360ViewRotation();
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Close modal when clicking outside
+        const modal = document.getElementById('view360Modal');
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target.id === 'view360Modal') {
+                    close360View();
+                }
+            });
+        }
+
+        // Touch support for mobile
+        let touchStartX = 0;
+        let touchStartRotation = 0;
+
+        if (viewer) {
+            viewer.addEventListener('touchstart', (e) => {
+                if (!document.getElementById('view360Modal').classList.contains('active')) return;
+                touchStartX = e.touches[0].clientX;
+                touchStartRotation = current360Rotation;
+                stopAutoRotate();
+                e.preventDefault();
+            });
+
+            viewer.addEventListener('touchmove', (e) => {
+                if (!document.getElementById('view360Modal').classList.contains('active')) return;
+                const deltaX = e.touches[0].clientX - touchStartX;
+                const rotationDelta = Math.round(deltaX / 10);
+                current360Rotation = touchStartRotation + rotationDelta;
+                
+                while (current360Rotation < 0) current360Rotation += rotationSteps;
+                while (current360Rotation >= rotationSteps) current360Rotation -= rotationSteps;
+                
+                update360ViewRotation();
+                e.preventDefault();
+            });
         }
 
         // MENU TOGGLE FOR MOBILE
