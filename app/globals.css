@@ -905,11 +905,12 @@ main {
 .social-icon svg {
   width: 16px;
   height: 16px;
-  transition: filter 0.15s ease;
+  transition: filter 0.15s ease, transform 0.15s ease;
 }
 
 .social-link:hover .social-icon svg {
   filter: none;
+  transform: translateY(-2px);
 }
 
 .contact-grid {
