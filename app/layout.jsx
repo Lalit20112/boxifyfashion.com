@@ -31,11 +31,11 @@ const makeWhatsAppUrl = (text) =>
 
 export const metadata = {
   metadataBase: new URL('https://boxifyfashion.com'),
-  title: 'Boxify Fashion | Wholesale Sportswear Manufacturer',
+  title: 'Boxify Fashion | Wholesale Wear Manufacturer',
   description:
-    'Factory-first B2B sportswear manufacturer: tracksuits, lowers, tees, hoodies, polos, uniforms with branding. MOQ 10, fast turnaround, own cutting + stitching + finishing.',
+    'Factory-first B2B wear manufacturer: tracksuits, lowers, tees, polos, hoodies, uniforms with branding. MOQ 10, fast turnaround, own cutting + stitching + finishing.',
   openGraph: {
-    title: 'Boxify Fashion | Wholesale Sportswear Manufacturer',
+    title: 'Boxify Fashion | Wholesale Wear Manufacturer',
     description:
       'Factory-owned production floor delivering tracksuits, joggers, tees, polos, hoodies, uniforms with custom branding. MOQ 10, fast dispatch.',
     url: 'https://boxifyfashion.com',
@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
                 <div className="footer-grid">
                   <div>
                     <h4>Boxify Fashion</h4>
-                    <p>Wholesale sportswear manufacturer. Factory-first since 2018.</p>
+                    <p>Wholesale wear manufacturer. Factory-first since 2018.</p>
                   </div>
                   <div>
                     <h4>Contact</h4>

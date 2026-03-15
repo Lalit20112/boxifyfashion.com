@@ -33,7 +33,7 @@ export default function ContactPage() {
         <div className="cta-wide" style={{ color: 'white' }}>
           <div>
             <p className="eyebrow">Let’s start your next run</p>
-            <h2>Wholesale sportswear · custom branding · quick turnaround</h2>
+            <h2>Wholesale wear · custom branding · quick turnaround</h2>
             <p className="muted">Tracksuits, joggers, tees, polos, hoodies, uniforms with labeling/packing on request.</p>
           </div>
           <div className="cta-row">
