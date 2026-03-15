@@ -252,9 +252,9 @@ export default function Page() {
               <div className="about-photo" style={{ backgroundImage: "url('/images/about3.jpg')" }} />
             </div>
             <div className="owner-card">
-              <p className="pill subtle">Owner</p>
-              <h3>Naveen</h3>
-              <p>Leads production and delivery—fabric selection, cutting accuracy, QC, and on-time dispatch for every lot.</p>
+              <p className="pill subtle">Founder</p>
+              <h3>Naveen Saroya</h3>
+              <p>Founder, Boxify Fashion — leads production and delivery, from fabric selection and cutting accuracy to QC and on-time dispatch for every lot.</p>
             </div>
           </div>
         </section>
