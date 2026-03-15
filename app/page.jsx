@@ -1,0 +1,288 @@
+const whatsappNumber = '9812923850';
+const email = 'info@boxifyfashion.com';
+
+const products = [
+  {
+    id: 1,
+    name: 'Premium Cargo Pants',
+    category: 'Cargo Pants',
+    article: '10086',
+    fabric: 'Nylon Crush Lycra Terry',
+    price: 450,
+    image: '/images/art-201.jpeg',
+    colors: ['Black', 'Grey', 'Khaki', 'Olive'],
+    sizes: ['M', 'L', 'XL', 'XXL'],
+  },
+  {
+    id: 2,
+    name: 'Casual Jogger Pants',
+    category: 'Casual Pants',
+    article: '10075',
+    fabric: 'Bubble Crush',
+    price: 420,
+    image: '/images/artical-205.jpeg',
+    colors: ['Grey', 'Green', 'Black', 'Brown'],
+    sizes: ['M', 'L', 'XL', 'XXL'],
+  },
+  {
+    id: 3,
+    name: 'Cotton Twill Cargo',
+    category: 'Cargo Pants',
+    article: '10046',
+    fabric: 'Cotton Twill',
+    price: 380,
+    image: '/images/art4.jpeg',
+    colors: ['Khaki', 'Camel', 'Brown', 'Black'],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+  },
+  {
+    id: 4,
+    name: 'Nylon Cargo Joggers',
+    category: 'Casual Pants',
+    article: '10005',
+    fabric: 'Nylon Crush',
+    price: 400,
+    image: '/images/art-202.jpeg',
+    colors: ['Grey', 'Khaki', 'Black', 'Brown'],
+    sizes: ['M', 'L', 'XL'],
+  },
+  {
+    id: 5,
+    name: 'Premium Nylon Pant',
+    category: 'Casual Pants',
+    article: '10004',
+    fabric: 'Nylon Crush',
+    price: 440,
+    image: '/images/art-203.jpeg',
+    colors: ['Black', 'Grey', 'Brown', 'Olive', 'Camel', 'Sky'],
+    sizes: ['M', 'L', 'XL', 'XXL', '3XL'],
+  },
+  {
+    id: 6,
+    name: 'Heavy Lycra Collection',
+    category: 'Heavy Lycra',
+    article: '10000',
+    fabric: 'Heavy Lycra',
+    price: 550,
+    image: '/images/artical-6.png',
+    colors: ['Black', 'Grey'],
+    sizes: ['30', '32', '34', '36', '38', '40', '42', '44'],
+  },
+];
+
+const highlights = [
+  {
+    title: 'Own Factory',
+    text: 'Cutting, stitching, branding, packing under one roof.',
+  },
+  {
+    title: 'MOQ 10 (B2B)',
+    text: 'Bulk-friendly pricing; volume discounts for resellers.',
+  },
+  {
+    title: 'Fast Turnaround',
+    text: 'Clear lead times with expedited runs on request.',
+  },
+];
+
+const values = [
+  {
+    title: 'Quality Assurance',
+    text: 'Fabric testing, pattern alignment, seam checks, finishing.',
+  },
+  {
+    title: 'Custom Branding',
+    text: 'Print/embroidery, labels, tags, and packaging per spec.',
+  },
+  {
+    title: 'Competitive Pricing',
+    text: 'Factory-direct rates with predictable costs.',
+  },
+  {
+    title: 'Reliable Delivery',
+    text: 'On-time dispatch with transparent updates.',
+  },
+];
+
+const steps = [
+  { title: 'Brief & fabric', text: 'Lock GSM, blends, colors, sizing before cutting.' },
+  { title: 'Cut & stitch', text: 'Pattern-aligned cutting and skilled stitching lines.' },
+  { title: 'Branding', text: 'Print/embroidery, labels, tags, custom packing.' },
+  { title: 'QC & dispatch', text: 'Stage-wise checks, finishing, bulk packing, dispatch.' },
+];
+
+const timeline = [
+  { year: '2018', text: 'Factory launched; first bulk tracksuit order shipped.' },
+  { year: '2020', text: 'Expanded cutting/stitching lines; fleece/knit specialization.' },
+  { year: '2022', text: '30K+ units/month capacity; upgraded QA + finishing.' },
+  { year: '2024', text: 'Serving global B2B buyers with custom branding and rapid lead times.' },
+];
+
+const socials = [
+  { label: 'Instagram', href: 'https://www.instagram.com/boxifyfashion' },
+  { label: 'Facebook', href: 'https://www.facebook.com/boxifyfashion' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@boxifyfashion' },
+]; // Twitter removed
+
+const makeWhatsAppUrl = (text) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+export default function Page() {
+  return (
+    <div className="page">
+      <main>
+        <section className="hero" id="hero">
+          <div className="hero-overlay" />
+          <video className="hero-video" autoPlay muted loop playsInline>
+            <source src="https://videos.pexels.com/video-files/5741335/5741335-uhd_2560_1440_24fps.mp4" type="video/mp4" />
+            <source src="/images/boxy3.mp4" type="video/mp4" />
+          </video>
+          <div className="hero-content">
+            <p className="eyebrow">Factory-first · MOQ 10</p>
+            <h1>Premium Wholesale Sportswear</h1>
+            <p className="lede">
+              Tracksuits, joggers, tees, polos, hoodies, uniforms with custom branding—cutting, stitching, finishing under one roof.
+            </p>
+            <div className="hero-actions">
+              <a className="btn solid" href={makeWhatsAppUrl('Hi Boxify Fashion, I want to place a wholesale order.')} target="_blank" rel="noreferrer">
+                Order on WhatsApp
+              </a>
+              <a className="btn ghost" href={`mailto:${email}`}>Email info@boxifyfashion.com</a>
+            </div>
+            <div className="pills">
+              <span>Bulk-ready</span>
+              <span>Custom branding</span>
+              <span>Fast turnaround</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid highlights" aria-labelledby="highlights-heading">
+          <div className="section-header">
+            <h2 id="highlights-heading">Why partners choose us</h2>
+            <p>Factory-owned lines, transparent timelines, consistent QC.</p>
+          </div>
+          <div className="card-grid">
+            {highlights.map((item) => (
+              <div className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid" id="collections" aria-labelledby="collections-heading">
+          <div className="section-header">
+            <h2 id="collections-heading">Featured collections</h2>
+            <p>Top picks. MOQ 10 · Custom colors/sizes on request.</p>
+          </div>
+          <div className="product-grid">
+            {products.slice(0, 3).map((p) => (
+              <article className="product" key={p.id}>
+                <div className="product-image" style={{ backgroundImage: `url(${p.image})` }} aria-label={p.name} />
+                <div className="product-body compact">
+                  <p className="pill subtle">{p.category}</p>
+                  <h3>{p.name}</h3>
+                  <div className="product-footer compact">
+                    <a
+                      className="btn solid small"
+                      href={makeWhatsAppUrl(`Hi, I want to order ${p.name} (Article ${p.article}) from Boxify Fashion. Please share pricing and lead time.`)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      WhatsApp
+                    </a>
+                    <a className="btn ghost small" href={`mailto:${email}?subject=${encodeURIComponent('Enquiry: ' + p.name)}&body=${encodeURIComponent(`Hi, I want wholesale details for ${p.name} (Article ${p.article}). MOQ 10+.`)}`}>
+                      Email
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="cta-row" style={{ marginTop: '1rem' }}>
+            <a className="btn solid" href="/products">View all products</a>
+            <a className="btn ghost" href={makeWhatsAppUrl('Hi, share full product catalog and pricing for Boxify Fashion.')}>WhatsApp catalog</a>
+          </div>
+        </section>
+
+        <section className="grid" id="process" aria-labelledby="process-heading">
+          <div className="section-header">
+            <h2 id="process-heading">The way we work</h2>
+            <p>From fabric to dispatch—simple, transparent steps.</p>
+          </div>
+          <div className="card-grid four">
+            {steps.map((s) => (
+              <div className="card" key={s.title}>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="split" id="about">
+          <div className="text">
+            <h2>About Boxify Fashion</h2>
+            <p>Boxify Fashion is a B2B-first manufacturer with its own tailoring floor—cutting, stitching, branding, and finishing under one roof for consistent wholesale quality.</p>
+            <p>We ship bulk tracksuits, lowers, tees, polos, hoodies, and uniforms for retailers and resellers worldwide.</p>
+            <div className="value-grid">
+              {values.map((v) => (
+                <div className="pill-card" key={v.title}>
+                  <h4>{v.title}</h4>
+                  <p>{v.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="timeline">
+              {timeline.map((t) => (
+                <div className="timeline-row" key={t.year}>
+                  <div className="year">{t.year}</div>
+                  <div className="line" />
+                  <div className="text">{t.text}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="media">
+            <div className="media-grid">
+              <div className="about-photo" style={{ backgroundImage: "url('/images/about1.jpg')" }} />
+              <div className="about-photo" style={{ backgroundImage: "url('/images/about2.jpg')" }} />
+              <div className="about-photo" style={{ backgroundImage: "url('/images/about3.jpg')" }} />
+            </div>
+            <div className="owner-card">
+              <p className="pill subtle">Owner</p>
+              <h3>Naveen</h3>
+              <p>Leads production and delivery—fabric selection, cutting accuracy, QC, and on-time dispatch for every lot.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="cta-wide" id="contact">
+          <div>
+            <p className="eyebrow">Let’s start your next run</p>
+            <h2>Share your article, colors, sizes, and quantity (MOQ 10)</h2>
+            <p className="muted">Fast quotes on WhatsApp. Branding, labels, packaging on request.</p>
+          </div>
+          <div className="cta-row">
+            <a className="btn solid" href={makeWhatsAppUrl('Hi, I want to place a wholesale order with Boxify Fashion. Please connect.')} target="_blank" rel="noreferrer">
+              WhatsApp +91 9812923850
+            </a>
+            <a className="btn ghost" href={`mailto:${email}`}>Email info@boxifyfashion.com</a>
+          </div>
+          <div className="contact-meta">
+            <span>MOQ 10 · Volume discounts</span>
+            <span>Custom branding & packing</span>
+            <span>Factory-owned production</span>
+          </div>
+          <div className="socials">
+            {socials.map((s) => (
+              <a key={s.label} href={s.href} target="_blank" rel="noreferrer">{s.label}</a>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
