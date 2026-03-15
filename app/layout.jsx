@@ -117,6 +117,7 @@ export default function RootLayout({ children }) {
                     allowFullScreen
                     loading="lazy"
                   />
+                  <a className="map-link" href="https://maps.app.goo.gl/kS9i11DCVksHnotN6?g_st=iwb" target="_blank" rel="noreferrer">Open in Google Maps</a>
                 </div>
                 <div className="footer-bottom">© 2026 Boxify Fashion. All rights reserved.</div>
               </footer>

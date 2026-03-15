@@ -952,12 +952,23 @@ main {
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
   min-height: 320px;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 .map-card iframe {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.map-link {
+  display: block;
+  text-align: center;
+  padding: 0.6rem;
+  background: #f5f7fa;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
 }
 
 .direct-list li {
