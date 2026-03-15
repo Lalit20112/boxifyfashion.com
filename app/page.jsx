@@ -1,4 +1,4 @@
-const whatsappNumber = '9053018751';
+const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
 
 const products = [
@@ -267,7 +267,7 @@ export default function Page() {
           </div>
           <div className="cta-row">
             <a className="btn solid" href={makeWhatsAppUrl('Hi, I want to place a wholesale order with Boxify Fashion. Please connect.')} target="_blank" rel="noreferrer">
-              WhatsApp +91 9053018751
+              WhatsApp +91 9817197390
             </a>
             <a className="btn ghost" href={`mailto:${email}`}>Email info@boxifyfashion.com</a>
           </div>

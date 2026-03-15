@@ -1,4 +1,4 @@
-const whatsappNumber = '9053018751';
+const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
 const makeWhatsAppUrl = (text) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;

@@ -7,7 +7,7 @@ import { ProfileProvider } from './profile-provider';
 import NamePrompt from './name-prompt';
 import ProfileIcon from './profile-icon';
 
-const whatsappNumber = '9053018751';
+const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
 const socials = [
   { label: 'Instagram', href: 'https://www.instagram.com/boxifyfashion' },
