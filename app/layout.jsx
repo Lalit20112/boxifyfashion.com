@@ -113,11 +113,11 @@ export default function RootLayout({ children }) {
                 <div className="map-card" style={{ marginTop: '1rem' }}>
                   <iframe
                     title="Boxify Fashion location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.028237025301!2d76.99879971152843!3d30.73916747446321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef011d5c14a1%3A0xe4c07e7286d7772e!2sSiliguri%20City%2C%20Square%2C%20Kharar%2C%20Punjab%20140201!5e0!3m2!1sen!2sin!4v1731845450000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps?q=Shop+No.+69,+Boxify+Fashion,+Ganpati+Colony,+70/71,+Barwala+Rd,+Agroha,+Haryana+125047&output=embed"
                     allowFullScreen
                     loading="lazy"
                   />
-                  <a className="map-link" href="https://maps.app.goo.gl/kS9i11DCVksHnotN6?g_st=iwb" target="_blank" rel="noreferrer">Open in Google Maps</a>
+                  <a className="map-link" href="https://www.google.com/maps?q=Shop+No.+69,+Boxify+Fashion,+Ganpati+Colony,+70/71,+Barwala+Rd,+Agroha,+Haryana+125047&ftid=0x3913d58f3393ec67:0x20bc5e8ecd06bd2&entry=gps&shh=CAE&lucs=,94259550,94297699,94284475,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI2LjEwLjIuODc3MzE3OTEwMBgAINeCAypRLDk0MjU5NTUwLDk0Mjk3Njk5LDk0Mjg0NDc1LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjg2ODY5QgJJTg%3D%3D&skid=c7af4c41-a15f-45bb-ac0b-6e197df06694&g_st=iwb" target="_blank" rel="noreferrer">Open in Google Maps</a>
                 </div>
                 <div className="footer-bottom">© 2026 Boxify Fashion. All rights reserved.</div>
               </footer>
