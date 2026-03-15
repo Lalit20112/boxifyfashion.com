@@ -93,6 +93,7 @@ export default function RootLayout({ children }) {
                     <ul>
                       <li><a href={makeWhatsAppUrl('Hi, I want to place a wholesale order.')}>WhatsApp: +91 {whatsappNumber}</a></li>
                       <li><a href={`mailto:${email}`}>{email}</a></li>
+                      <li><a href="https://maps.app.goo.gl/kS9i11DCVksHnotN6?g_st=iwb" target="_blank" rel="noreferrer">Location: View on Google Maps</a></li>
                     </ul>
                   </div>
                   <div>
