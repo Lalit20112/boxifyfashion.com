@@ -33,11 +33,11 @@ export const metadata = {
   metadataBase: new URL('https://boxifyfashion.com'),
   title: 'Boxify Fashion | Wholesale Wear Manufacturer',
   description:
-    'Factory-first B2B wear manufacturer: tracksuits, lowers, tees, polos, hoodies, uniforms with branding. MOQ 10, fast turnaround, own cutting + stitching + finishing.',
+    'Boxify — Quality & casuals manufacturer producing premium track pants, t-shirts, joggers, jackets, and custom teamwear. Custom orders, bulk pricing, fast delivery.',
   openGraph: {
     title: 'Boxify Fashion | Wholesale Wear Manufacturer',
     description:
-      'Factory-owned production floor delivering tracksuits, joggers, tees, polos, hoodies, uniforms with custom branding. MOQ 10, fast dispatch.',
+      'Boxify — Quality & casuals manufacturer producing premium track pants, t-shirts, joggers, jackets, and custom teamwear. Custom orders, bulk pricing, fast delivery.',
     url: 'https://boxifyfashion.com',
     siteName: 'Boxify Fashion',
     images: [

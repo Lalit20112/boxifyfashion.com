@@ -139,9 +139,9 @@ export default function Page() {
           </video>
           <div className="hero-content">
             <p className="eyebrow">Factory-first · MOQ 10</p>
-            <h1>Premium Wholesale Wear</h1>
+            <h1>Boxify — Quality & Casuals Manufacturer</h1>
             <p className="lede">
-              Tracksuits, joggers, tees, polos, hoodies, uniforms with custom branding—cutting, stitching, finishing under one roof.
+              Premium track pants, t-shirts, joggers, jackets, and custom teamwear. Custom orders, bulk pricing, fast delivery.
             </p>
             <div className="hero-actions">
               <a className="btn solid" href={makeWhatsAppUrl('Hi Boxify Fashion, I want to place a wholesale order.')} target="_blank" rel="noreferrer">

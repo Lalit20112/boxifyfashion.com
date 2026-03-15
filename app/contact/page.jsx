@@ -33,8 +33,8 @@ export default function ContactPage() {
         <div className="cta-wide" style={{ color: 'white' }}>
           <div>
             <p className="eyebrow">Let’s start your next run</p>
-            <h2>Wholesale wear · custom branding · quick turnaround</h2>
-            <p className="muted">Tracksuits, joggers, tees, polos, hoodies, uniforms with labeling/packing on request.</p>
+            <h2>Custom orders · bulk pricing · fast delivery</h2>
+            <p className="muted">Track pants, t-shirts, joggers, jackets, custom teamwear with labeling/packing on request.</p>
           </div>
           <div className="cta-row">
             <a className="btn solid" href={makeWhatsAppUrl('Hi, I want to place a wholesale order with Boxify Fashion. Please connect.')} target="_blank" rel="noreferrer">
