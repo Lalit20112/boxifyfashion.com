@@ -79,9 +79,9 @@ export default function AboutPage() {
           <div className="owner-detail">
             <div className="owner-photo" style={{ backgroundImage: "url('/images/owner.jpg')" }} />
             <div>
-              <p className="pill subtle">Owner</p>
-              <h3>Naveen</h3>
-              <p className="muted">Leads production and delivery—fabric selection, cutting accuracy, QC, and on-time dispatch for every lot.</p>
+              <p className="pill subtle">Founder</p>
+              <h3>Naveen Saroya</h3>
+              <p className="muted">Founder, Boxify Fashion. Leads production and delivery—fabric selection, cutting accuracy, QC, and on-time dispatch for every lot.</p>
               <div className="owner-meta">
                 <span className="pill subtle">10+ yrs in manufacturing</span>
                 <span className="pill subtle">30+ team</span>
