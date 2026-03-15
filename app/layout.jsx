@@ -110,6 +110,14 @@ export default function RootLayout({ children }) {
                     </ul>
                   </div>
                 </div>
+                <div className="map-card" style={{ marginTop: '1rem' }}>
+                  <iframe
+                    title="Boxify Fashion location"
+                    src="https://www.google.com/maps?q=maps.app.goo.gl/kS9i11DCVksHnotN6?g_st=iwb&output=embed"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
                 <div className="footer-bottom">© 2026 Boxify Fashion. All rights reserved.</div>
               </footer>
             </div>
