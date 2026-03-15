@@ -87,7 +87,7 @@ export default function ContactPage() {
             <li><strong>WhatsApp:</strong> <a className="social-link" href={makeWhatsAppUrl('Hi, need pricing and timelines.')} target="_blank" rel="noreferrer"><span className="social-icon" aria-hidden="true">{socialIcons.WhatsApp}</span>+91 {whatsappNumber}</a></li>
             <li><strong>Email:</strong> <a className="social-link" href={`mailto:${email}`}><span className="social-icon" aria-hidden="true">{socialIcons.Email}</span>{email}</a></li>
             <li><strong>Instagram:</strong> <a className="social-link" href="https://www.instagram.com/boxifyfashion" target="_blank" rel="noreferrer"><span className="social-icon" aria-hidden="true">{socialIcons.Instagram}</span>@boxifyfashion</a></li>
-            <li><strong>Facebook:</strong> <a className="social-link" href="https://www.facebook.com/boxifyfashion" target="_blank" rel="noreferrer"><span className="social-icon" aria-hidden="true">{socialIcons.Facebook}</span>facebook.com/boxifyfashion</a></li>
+            <li><strong>Facebook:</strong> <a className="social-link" href="https://www.facebook.com/boxifyfashion" target="_blank" rel="noreferrer"><span className="social-icon" aria-hidden="true">{socialIcons.Facebook}</span>boxifyfashion</a></li>
             <li><strong>YouTube:</strong> <a className="social-link" href="https://www.youtube.com/@boxifyfashion" target="_blank" rel="noreferrer"><span className="social-icon" aria-hidden="true">{socialIcons.YouTube}</span>@boxifyfashion</a></li>
           </ul>
         </div>
