@@ -93,18 +93,6 @@ export default function ContactPage() {
           </ul>
         </div>
       </section>
-
-      <section className="grid">
-        <h3>Location map</h3>
-        <div className="map-card">
-          <iframe
-            title="Boxify Fashion location"
-            src="https://www.google.com/maps?q=maps.app.goo.gl/kS9i11DCVksHnotN6?g_st=iwb&output=embed"
-            allowFullScreen
-            loading="lazy"
-          />
-        </div>
-      </section>
     </main>
   );
 }
