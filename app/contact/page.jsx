@@ -89,6 +89,7 @@ export default function ContactPage() {
             <li><strong>Instagram:</strong> <a className="social-link" href="https://www.instagram.com/boxifyfashion" target="_blank" rel="noreferrer"><span className="social-icon" aria-hidden="true">{socialIcons.Instagram}</span>@boxifyfashion</a></li>
             <li><strong>Facebook:</strong> <a className="social-link" href="https://www.facebook.com/boxifyfashion" target="_blank" rel="noreferrer"><span className="social-icon" aria-hidden="true">{socialIcons.Facebook}</span>boxifyfashion</a></li>
             <li><strong>YouTube:</strong> <a className="social-link" href="https://www.youtube.com/@boxifyfashion" target="_blank" rel="noreferrer"><span className="social-icon" aria-hidden="true">{socialIcons.YouTube}</span>@boxifyfashion</a></li>
+            <li><strong>Location:</strong> <a className="social-link" href="https://maps.app.goo.gl/kS9i11DCVksHnotN6?g_st=iwb" target="_blank" rel="noreferrer">View on Google Maps</a></li>
           </ul>
         </div>
       </section>
