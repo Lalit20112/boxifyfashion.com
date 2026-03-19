@@ -53,9 +53,9 @@ export const metadata = {
     type: 'website',
   },
   icons: {
-    icon: ['/favicon.ico', '/favicon.png'],
-    shortcut: ['/favicon.ico', '/favicon.png'],
-    apple: '/apple-touch-icon.png',
+    icon: ['/favicon-2026.ico', '/favicon-2026.png', '/favicon.ico', '/favicon.png'],
+    shortcut: ['/favicon-2026.ico', '/favicon-2026.png', '/favicon.ico', '/favicon.png'],
+    apple: ['/apple-touch-icon-2026.png', '/apple-touch-icon.png'],
   },
 };
 
@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
             <SplashProvider>
               <div className="shell">
                 <header className="topbar">
-                <div className="brand"><Link href="/"><img src="/logo.png" alt="Boxify Fashion" className="brand-logo" /></Link></div>
+                <div className="brand"><Link href="/"><img src="/logo-2026.png" alt="Boxify Fashion" className="brand-logo" /></Link></div>
                 <nav className="nav desktop-nav">
                   <Link href="/">Home</Link>
                   <Link href="/products">Products</Link>
