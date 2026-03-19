@@ -87,6 +87,69 @@ main {
   flex-wrap: wrap;
 }
 
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.nav-toggle {
+  position: relative;
+}
+
+.nav-toggle-btn {
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 10px;
+  padding: 0.35rem 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-drawer {
+  position: absolute;
+  right: 0;
+  top: 120%;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 180px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  padding: 0.75rem;
+  z-index: 50;
+}
+
+.nav-drawer.open {
+  display: flex;
+}
+
+.nav-drawer a {
+  font-weight: 700;
+  color: var(--text);
+  padding: 0.35rem 0.4rem;
+  border-radius: 8px;
+}
+
+.nav-drawer a:hover {
+  background: rgba(44, 90, 160, 0.08);
+}
+
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
 .profile-icon {
   width: 36px;
   height: 36px;

@@ -6,6 +6,7 @@ import CartNav from './cart-nav';
 import { ProfileProvider } from './profile-provider';
 import NamePrompt from './name-prompt';
 import ProfileIcon from './profile-icon';
+import NavToggle from './nav-toggle';
 
 const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
@@ -68,7 +69,7 @@ export default function RootLayout({ children }) {
               <div className="shell">
                 <header className="topbar">
                 <div className="brand"><Link href="/"><img src="/logo.png" alt="Boxify Fashion" className="brand-logo" /></Link></div>
-                <nav className="nav">
+                <nav className="nav desktop-nav">
                   <Link href="/">Home</Link>
                   <Link href="/products">Products</Link>
                   <Link href="/about">About</Link>
@@ -77,6 +78,9 @@ export default function RootLayout({ children }) {
                 <div className="topbar-actions">
                   <CartNav />
                   <ProfileIcon />
+                  <div className="mobile-only">
+                    <NavToggle />
+                  </div>
                 </div>
               </header>
 
