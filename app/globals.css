@@ -644,7 +644,13 @@ main {
 .hero-media .video-card {
   border: none;
   border-radius: 0;
-  min-height: 320px;
+  min-height: 240px;
+}
+
+@media (max-width: 640px) {
+  .hero-media .video-card {
+    min-height: 200px;
+  }
 }
 
 .gallery-grid {
