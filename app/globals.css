@@ -644,12 +644,21 @@ main {
 .hero-media .video-card {
   border: none;
   border-radius: 0;
-  min-height: 240px;
+  min-height: 180px;
+  max-height: 240px;
+  aspect-ratio: 16 / 9;
+}
+
+.hero-media .video-card video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 640px) {
   .hero-media .video-card {
-    min-height: 200px;
+    min-height: 160px;
+    max-height: 200px;
   }
 }
 
