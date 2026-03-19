@@ -45,15 +45,16 @@ main {
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
   backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 1.5rem;
+  padding: 0.7rem 1.25rem;
   gap: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
 .topbar .nav {
