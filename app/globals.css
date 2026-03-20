@@ -1262,6 +1262,56 @@ main {
   }
 }
 
+@media (max-width: 640px) {
+  main {
+    padding: 0.95rem;
+  }
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+  .section-header p {
+    font-size: 0.95rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.9rem, 6vw, 2.4rem);
+  }
+  .hero .lede {
+    font-size: 0.95rem;
+  }
+  .hero-actions {
+    display: grid;
+    gap: 0.6rem;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .card-grid,
+  .value-grid,
+  .media-grid,
+  .product-grid,
+  .contact-grid {
+    gap: 0.65rem;
+  }
+  .card,
+  .pill-card,
+  .product,
+  .info-card,
+  .map-card,
+  .f-card {
+    border-radius: 14px;
+  }
+  .product-body.compact h3 {
+    font-size: 1.05rem;
+  }
+  .product-footer.compact {
+    gap: 0.4rem;
+  }
+  .btn.small {
+    padding: 0.5rem 0.85rem;
+  }
+}
+
 
 /* Featured mobile carousel */
 .featured-desktop {
