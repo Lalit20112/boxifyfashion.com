@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-export default function FeaturedCarousel({ items = [], makeWhatsAppUrl, email }) {
+export default function FeaturedCarousel({ items = [], whatsappNumber, email }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -15,6 +15,7 @@ export default function FeaturedCarousel({ items = [], makeWhatsAppUrl, email })
 
   const go = (i) => setIndex((i + items.length) % items.length);
 
+  const makeWhatsAppUrl = (text) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
   const current = items[index];
 
   return (

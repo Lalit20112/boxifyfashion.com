@@ -204,7 +204,7 @@ export default function Page() {
             ))}
           </div>
           <div className="featured-mobile">
-            <FeaturedCarousel items={products.slice(0, 3)} makeWhatsAppUrl={makeWhatsAppUrl} email={email} />
+            <FeaturedCarousel items={products.slice(0, 3)} whatsappNumber={whatsappNumber} email={email} />
           </div>
           <div className="cta-row" style={{ marginTop: '1rem' }}>
             <a className="btn solid" href="/products">View all products</a>
