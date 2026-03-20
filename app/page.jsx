@@ -1,4 +1,5 @@
 import FeaturedCarousel from './featured-carousel';
+import ScrollReveal from './scroll-reveal';
 
 const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
@@ -132,8 +133,9 @@ const makeWhatsAppUrl = (text) =>
 export default function Page() {
   return (
     <div className="page">
+      <ScrollReveal />
       <main>
-        <section className="hero" id="hero">
+        <section className="hero" id="hero" data-reveal>
           <div className="hero-overlay" />
           <video className="hero-video" autoPlay muted loop playsInline>
             <source src="https://videos.pexels.com/video-files/5741335/5741335-uhd_2560_1440_24fps.mp4" type="video/mp4" />
@@ -159,7 +161,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="grid highlights" aria-labelledby="highlights-heading">
+        <section className="grid highlights" aria-labelledby="highlights-heading" data-reveal>
           <div className="section-header">
             <h2 id="highlights-heading">Why partners choose us</h2>
             <p>Factory-owned lines, transparent timelines, consistent QC.</p>
@@ -174,7 +176,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="grid" id="collections" aria-labelledby="collections-heading">
+        <section className="grid" id="collections" aria-labelledby="collections-heading" data-reveal>
           <div className="section-header">
             <h2 id="collections-heading">Featured collections</h2>
             <p>Top picks. MOQ 10 · Custom colors/sizes on request.</p>
@@ -212,7 +214,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="grid" id="process" aria-labelledby="process-heading">
+        <section className="grid" id="process" aria-labelledby="process-heading" data-reveal>
           <div className="section-header">
             <h2 id="process-heading">The way we work</h2>
             <p>From fabric to dispatch—simple, transparent steps.</p>
@@ -227,7 +229,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="split" id="about">
+        <section className="split" id="about" data-reveal>
           <div className="text">
             <h2>About Boxify Fashion</h2>
             <p>Boxify Fashion is a B2B-first manufacturer with its own tailoring floor—cutting, stitching, branding, and finishing under one roof for consistent wholesale quality.</p>
