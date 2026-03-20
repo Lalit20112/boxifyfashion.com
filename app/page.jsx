@@ -1,3 +1,5 @@
+import FeaturedCarousel from './featured-carousel';
+
 const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
 
@@ -177,7 +179,7 @@ export default function Page() {
             <h2 id="collections-heading">Featured collections</h2>
             <p>Top picks. MOQ 10 · Custom colors/sizes on request.</p>
           </div>
-          <div className="product-grid">
+          <div className="product-grid featured-desktop">
             {products.slice(0, 3).map((p) => (
               <article className="product" key={p.id}>
                 <div className="product-image" style={{ backgroundImage: `url(${p.image})` }} aria-label={p.name} />
@@ -200,6 +202,9 @@ export default function Page() {
                 </div>
               </article>
             ))}
+          </div>
+          <div className="featured-mobile">
+            <FeaturedCarousel items={products.slice(0, 3)} makeWhatsAppUrl={makeWhatsAppUrl} email={email} />
           </div>
           <div className="cta-row" style={{ marginTop: '1rem' }}>
             <a className="btn solid" href="/products">View all products</a>
