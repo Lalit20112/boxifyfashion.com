@@ -1,5 +1,3 @@
-import HighlightsCarousel from './highlights-carousel';
-
 const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
 
@@ -164,16 +162,13 @@ export default function Page() {
             <h2 id="highlights-heading">Why partners choose us</h2>
             <p>Factory-owned lines, transparent timelines, consistent QC.</p>
           </div>
-          <div className="card-grid grid-desktop">
+          <div className="card-grid">
             {highlights.map((item) => (
               <div className="card" key={item.title}>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
             ))}
-          </div>
-          <div className="carousel-wrap carousel-mobile">
-            <HighlightsCarousel items={highlights} />
           </div>
         </section>
 
