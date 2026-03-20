@@ -513,6 +513,18 @@ main {
   flex-wrap: wrap;
 }
 
+@media (max-width: 720px) {
+  .cta-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+  .cta-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
