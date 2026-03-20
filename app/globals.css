@@ -474,10 +474,10 @@ main {
 }
 
 .product-body {
-  padding: 0.85rem;
+  padding: 0.95rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.35rem;
 }
 
 .product-body.compact {
@@ -487,6 +487,12 @@ main {
 .product-body h3 {
   margin: 0;
   font-size: 1.12rem;
+}
+
+.product-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
 }
 
 .product-footer {
@@ -1323,8 +1329,17 @@ main {
   .product-body.compact h3 {
     font-size: 1.08rem;
   }
+  .product-meta {
+    font-size: 0.9rem;
+  }
   .product-footer.compact {
-    gap: 0.4rem;
+    gap: 0.45rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .product-footer.compact .btn {
+    width: 100%;
+    justify-content: center;
   }
   .btn.small {
     padding: 0.5rem 0.85rem;

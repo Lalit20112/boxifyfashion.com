@@ -25,6 +25,7 @@ export default function FeaturedCarousel({ items = [], whatsappNumber, email }) 
         <div className="product-body compact">
           <p className="pill subtle">{current.category}</p>
           <h3>{current.name}</h3>
+          <p className="product-meta">Article {current.article} · {current.fabric}</p>
           <div className="product-footer compact">
             <a
               className="btn solid small"

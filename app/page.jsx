@@ -188,6 +188,7 @@ export default function Page() {
                 <div className="product-body compact">
                   <p className="pill subtle">{p.category}</p>
                   <h3>{p.name}</h3>
+                  <p className="product-meta">Article {p.article} · {p.fabric}</p>
                   <div className="product-footer compact">
                     <a
                       className="btn solid small"
