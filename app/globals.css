@@ -646,11 +646,8 @@ main {
   margin: 1rem 0;
 }
 
-.pill-card {
-  background: #f9fafb;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 0.85rem;
+.pill-card h4 {
+  margin: 0 0 0.35rem 0;
 }
 
 .timeline {
@@ -679,6 +676,7 @@ main {
 .timeline-row .text {
   grid-column: 1 / span 2;
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .media {
