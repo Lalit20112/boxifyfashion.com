@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --primary: #1a3a52;
   --secondary: #2c5aa0;
   --accent: #ff6b35;
@@ -1263,6 +1263,14 @@ main {
 }
 
 /* Highlights carousel */
+.carousel-wrap {
+  width: 100%;
+}
+
+.carousel-mobile {
+  display: none;
+}
+
 .carousel {
   position: relative;
   margin-top: 0.75rem;
@@ -1339,9 +1347,19 @@ main {
   border-color: var(--secondary);
 }
 
+@media (max-width: 900px) {
+  .grid-desktop {
+    display: none;
+  }
+  .carousel-mobile {
+    display: block;
+  }
+}
+
 @media (max-width: 640px) {
   .carousel-card {
     padding: 1rem;
   }
 }
 \n.carousel {\n  position: relative;\n  margin-top: 0.75rem;\n  display: grid;\n  gap: 0.75rem;\n}\n\n.carousel-inner {\n  position: relative;\n  min-height: 180px;\n}\n\n.carousel-card {\n  display: none;\n  opacity: 0;\n  transition: opacity 0.3s ease;\n  padding: 1.25rem;\n  border-radius: 16px;\n  border: 1px solid var(--border);\n  background: #fff;\n  box-shadow: 0 10px 24px rgba(0,0,0,0.06);\n}\n\n.carousel-card.active {\n  display: block;\n  opacity: 1;\n}\n\n.carousel-card h3 {\n  margin: 0 0 0.4rem 0;\n}\n\n.carousel-card p {\n  margin: 0;\n  color: var(--muted);\n}\n\n.carousel-controls {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 0.5rem;\n}\n\n.carousel-controls button {\n  border: 1px solid var(--border);\n  background: white;\n  border-radius: 10px;\n  padding: 0.4rem 0.55rem;\n  cursor: pointer;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.carousel-dots {\n  display: inline-flex;\n  gap: 0.4rem;\n  align-items: center;\n}\n\n.carousel-dots button {\n  width: 10px;\n  height: 10px;\n  border-radius: 999px;\n  border: 1px solid var(--border);\n  background: #f5f7fa;\n  cursor: pointer;\n  transition: all 0.15s ease;\n}\n\n.carousel-dots button.active {\n  background: var(--secondary);\n  border-color: var(--secondary);\n}\n\n@media (max-width: 640px) {\n  .carousel-card {\n    padding: 1rem;\n  }\n}\n
+

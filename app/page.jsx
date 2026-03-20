@@ -164,7 +164,15 @@ export default function Page() {
             <h2 id="highlights-heading">Why partners choose us</h2>
             <p>Factory-owned lines, transparent timelines, consistent QC.</p>
           </div>
-          <div className="carousel-wrap">
+          <div className="card-grid grid-desktop">
+            {highlights.map((item) => (
+              <div className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="carousel-wrap carousel-mobile">
             <HighlightsCarousel items={highlights} />
           </div>
         </section>
