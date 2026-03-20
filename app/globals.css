@@ -261,7 +261,7 @@ main {
   position: relative;
   overflow: hidden;
   border-radius: 18px;
-  min-height: 380px;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1061,9 +1061,15 @@ main {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-  min-height: 380px;
+  min-height: 320px;
   display: grid;
   grid-template-rows: 1fr auto;
+}
+
+@media (max-width: 720px) {
+  .map-card {
+    min-height: 240px;
+  }
 }
 
 .map-card iframe {
@@ -1421,5 +1427,6 @@ main {
   transform: translateY(0);
   transition-delay: var(--reveal-delay, 0ms);
 }
+
 
 
