@@ -261,12 +261,19 @@ main {
   position: relative;
   overflow: hidden;
   border-radius: 18px;
-  min-height: 520px;
+  min-height: 380px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 3rem 2.5rem;
+  padding: 2.5rem 2rem;
   color: white;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 260px;
+    padding: 1.75rem 1.25rem;
+  }
 }
 
 .hero::after {
@@ -295,7 +302,7 @@ main {
 
 .hero-content {
   position: relative;
-  max-width: 760px;
+  max-width: 700px;
   z-index: 1;
 }
 
@@ -308,13 +315,13 @@ main {
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
-  margin: 0 0 0.8rem 0;
+  font-size: clamp(2.1rem, 3.6vw, 3.1rem);
+  margin: 0 0 0.7rem 0;
 }
 
 .hero .lede {
-  font-size: 1.1rem;
-  max-width: 720px;
+  font-size: 1rem;
+  max-width: 680px;
   opacity: 0.95;
 }
 
@@ -721,8 +728,8 @@ main {
 
 @media (max-width: 640px) {
   .hero-media .video-card {
-    min-height: 160px;
-    max-height: 200px;
+    min-height: 140px;
+    max-height: 180px;
   }
 }
 
