@@ -1430,3 +1430,4 @@ main {
 
 
 
+\n@media (max-width: 720px) {\n  .highlights .card-grid {\n    gap: 0.65rem;\n  }\n  .highlights .card {\n    padding: 0.85rem 0.9rem;\n    border-radius: 14px;\n    box-shadow: 0 10px 22px rgba(0,0,0,0.05);\n  }\n  .highlights .card h3 {\n    font-size: 1.05rem;\n    margin-bottom: 0.35rem;\n  }\n  .highlights .card p {\n    font-size: 0.96rem;\n  }\n}\n
