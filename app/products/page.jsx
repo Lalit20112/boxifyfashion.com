@@ -201,6 +201,7 @@ export default function ProductsPage() {
           <div className="modal-backdrop" onClick={closeModal} />
           <div className="modal-card">
             <button className="modal-close" onClick={closeModal} aria-label="Close">×</button>
+            <button className="modal-close-top" onClick={closeModal} aria-label="Close">×</button>
             <div className="modal-body">
               <div className={`modal-image ${zoom ? 'zoomed' : ''}`} onClick={() => setZoom(!zoom)}>
                 <img src={selected.image} alt={selected.name} />
