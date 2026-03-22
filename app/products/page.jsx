@@ -112,7 +112,7 @@ export default function ProductsPage() {
   };
 
   return (
-    <main style={{ padding: '1.5rem', display: 'grid', gap: '1.25rem' }}>
+    <main className="products-page" style={{ padding: '1.5rem', display: 'grid', gap: '1.25rem' }}>
       <section className="grid">
         <div className="section-header">
           <h1>Products</h1>
