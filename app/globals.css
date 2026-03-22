@@ -1122,8 +1122,8 @@ main {
   position: relative;
   background: #fff;
   border-radius: 14px;
-  max-width: 960px;
-  width: min(960px, 92vw);
+  max-width: 860px;
+  width: min(860px, 92vw);
   padding: 1rem;
   box-shadow: 0 24px 48px rgba(0,0,0,0.2);
   z-index: 1;
@@ -1190,9 +1190,33 @@ main {
 @media (max-width: 900px) {
   .modal-body {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
   .modal-card {
     padding: 0.75rem;
+    width: min(560px, 94vw);
+  }
+  .modal-image {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-card {
+    padding: 0.65rem;
+    width: min(520px, 94vw);
+  }
+  .modal-body {
+    gap: 0.6rem;
+  }
+  .modal-image {
+    height: 260px;
+  }
+  .modal-info h3 {
+    font-size: 1.05rem;
+  }
+  .modal-info p {
+    font-size: 0.95rem;
   }
 }
 
