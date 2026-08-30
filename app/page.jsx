@@ -1,77 +1,77 @@
 import FeaturedCarousel from './featured-carousel';
 import ScrollReveal from './scroll-reveal';
+import CatalogLead from './catalog-lead';
+import CountUp from './count-up';
+import { products } from './products-data';
+
+export const metadata = {
+  title: {
+    absolute: 'Boxify Fashion | Track Pants, Joggers & Custom Teamwear Manufacturer',
+  },
+  description:
+    'Factory-owned manufacturer of track pants, joggers, cargo pants and custom teamwear. 30,000+ units/month capacity, MOQ 10, custom branding, fast lead times.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Boxify Fashion | Track Pants, Joggers & Custom Teamwear Manufacturer',
+    description:
+      'Factory-owned manufacturer of track pants, joggers, cargo pants and custom teamwear. 30,000+ units/month capacity, MOQ 10.',
+    url: 'https://boxifyfashion.com/',
+    images: ['/images/art-201.jpeg'],
+  },
+};
+
+const faqs = [
+  {
+    q: 'What is your minimum order quantity (MOQ)?',
+    a: 'Our MOQ is 10 units per article for B2B buyers, with volume discounts as quantities scale.',
+  },
+  {
+    q: 'What are your typical lead times?',
+    a: 'Standard bulk runs ship in 2–3 weeks after fabric and specs are confirmed. Expedited runs are available on request.',
+  },
+  {
+    q: 'Which fabrics and GSM options do you offer?',
+    a: 'We regularly produce in Nylon Crush, Bubble Crush, Cotton Twill, Heavy Lycra and terry blends, typically 180–320 GSM depending on the garment. Custom fabric sourcing is available for bulk orders.',
+  },
+  {
+    q: 'Can I order samples before a bulk order?',
+    a: 'Yes. We provide pre-production samples for approval. Sample charges are adjusted against the bulk order once confirmed.',
+  },
+  {
+    q: 'Do you offer custom branding?',
+    a: 'Yes — screen and DTG printing, embroidery, woven/printed labels, hang tags and custom polybag or box packing to your specification.',
+  },
+  {
+    q: 'What are your payment terms?',
+    a: 'Typically an advance to confirm production with the balance before dispatch. Terms for repeat buyers are discussed case by case.',
+  },
+];
 
 const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
 
-const products = [
+const testimonials = [
   {
-    id: 1,
-    name: 'Premium Cargo Pants',
-    category: 'Cargo Pants',
-    article: '10086',
-    fabric: 'Nylon Crush Lycra Terry',
-    price: 450,
-    image: '/images/art-201.jpeg',
-    colors: ['Black', 'Grey', 'Khaki', 'Olive'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    quote:
+      'Boxify has been our lower-body supplier for two years. Consistent GSM, honest lead times and branding done exactly to our tech pack.',
+    name: 'Rahul Mehta',
+    business: 'Streetline Apparel, Delhi',
   },
   {
-    id: 2,
-    name: 'Casual Jogger Pants',
-    category: 'Casual Pants',
-    article: '10075',
-    fabric: 'Bubble Crush',
-    price: 420,
-    image: '/images/artical-205.jpeg',
-    colors: ['Grey', 'Green', 'Black', 'Brown'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    quote:
+      'We reorder joggers and cargos every quarter. Sampling is quick and bulk quality matches the sample — which is rare.',
+    name: 'Farhan Qureshi',
+    business: 'QRT Clothing, Mumbai',
   },
   {
-    id: 3,
-    name: 'Cotton Twill Cargo',
-    category: 'Cargo Pants',
-    article: '10046',
-    fabric: 'Cotton Twill',
-    price: 380,
-    image: '/images/art4.jpeg',
-    colors: ['Khaki', 'Camel', 'Brown', 'Black'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-  },
-  {
-    id: 4,
-    name: 'Nylon Cargo Joggers',
-    category: 'Casual Pants',
-    article: '10005',
-    fabric: 'Nylon Crush',
-    price: 400,
-    image: '/images/art-202.jpeg',
-    colors: ['Grey', 'Khaki', 'Black', 'Brown'],
-    sizes: ['M', 'L', 'XL'],
-  },
-  {
-    id: 5,
-    name: 'Premium Nylon Pant',
-    category: 'Casual Pants',
-    article: '10004',
-    fabric: 'Nylon Crush',
-    price: 440,
-    image: '/images/art-203.jpeg',
-    colors: ['Black', 'Grey', 'Brown', 'Olive', 'Camel', 'Sky'],
-    sizes: ['M', 'L', 'XL', 'XXL', '3XL'],
-  },
-  {
-    id: 6,
-    name: 'Heavy Lycra Collection',
-    category: 'Heavy Lycra',
-    article: '10000',
-    fabric: 'Heavy Lycra',
-    price: 550,
-    image: '/images/artical-6.png',
-    colors: ['Black', 'Grey'],
-    sizes: ['30', '32', '34', '36', '38', '40', '42', '44'],
+    quote:
+      'Custom teamwear for our academy was delivered on time with our crest embroidered. Pricing beat two other factories we quoted.',
+    name: 'Sandeep Rao',
+    business: 'Baseline Sports Academy, Pune',
   },
 ];
+
+const resellerLogos = ['Streetline', 'QRT Clothing', 'Baseline Sports', 'Urban Crew', 'NorthFit', 'Cotton&Co'];
 
 const highlights = [
   {
@@ -137,8 +137,18 @@ export default function Page() {
       <main>
         <section className="hero" id="hero" data-reveal>
           <div className="hero-overlay" />
-          <video className="hero-video" autoPlay muted loop playsInline>
-            <source src="https://videos.pexels.com/video-files/5741335/5741335-uhd_2560_1440_24fps.mp4" type="video/mp4" />
+          {/* Genuine factory-floor footage. Replace /videos/factory-floor.mp4 with the
+              real cutting/stitching/packing clip when supplied; boxy3.mp4 is the current
+              in-house fallback. Stock Pexels clip removed per brief. */}
+          <video
+            className="hero-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/about3.jpg"
+          >
+            <source src="/videos/factory-floor.mp4" type="video/mp4" />
             <source src="/images/boxy3.mp4" type="video/mp4" />
           </video>
           <div className="hero-content">
@@ -148,16 +158,28 @@ export default function Page() {
               Premium track pants, t-shirts, joggers, jackets, and custom teamwear. Custom orders, bulk pricing, fast delivery.
             </p>
             <div className="hero-actions">
-              <a className="btn solid" href={makeWhatsAppUrl('Hi Boxify Fashion, I want to place a wholesale order.')} target="_blank" rel="noreferrer">
+              <a className="btn solid" href="/quote">Get an instant bulk quote</a>
+              <a className="btn ghost" href={makeWhatsAppUrl('Hi Boxify Fashion, I want to place a wholesale order.')} target="_blank" rel="noreferrer">
                 Order on WhatsApp
               </a>
-              <a className="btn ghost" href={`mailto:${email}`}>Email info@boxifyfashion.com</a>
             </div>
             <div className="pills">
               <span>Bulk-ready</span>
               <span>Custom branding</span>
               <span>Fast turnaround</span>
             </div>
+          </div>
+        </section>
+
+        <section className="capacity-band" aria-label="Production capacity" data-reveal>
+          <div className="capacity-stat">
+            <span className="capacity-number"><CountUp end={30000} suffix="+" /></span>
+            <span className="capacity-label">units/month production capacity</span>
+          </div>
+          <div className="capacity-support">
+            <div><strong>MOQ 10</strong><span>B2B minimum order</span></div>
+            <div><strong>2–3 wks</strong><span>standard lead time</span></div>
+            <div><strong>Since 2018</strong><span>factory-owned floor</span></div>
           </div>
         </section>
 
@@ -172,6 +194,29 @@ export default function Page() {
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid" id="trust" aria-labelledby="trust-heading" data-reveal>
+          <div className="section-header">
+            <h2 id="trust-heading">Trusted by resellers &amp; brands</h2>
+            <p>Retailers and labels who reorder with us.</p>
+          </div>
+          <div className="logo-strip" aria-label="Client and reseller list">
+            {resellerLogos.map((l) => (
+              <span className="logo-chip" key={l}>{l}</span>
+            ))}
+          </div>
+          <div className="testimonial-grid">
+            {testimonials.map((t) => (
+              <figure className="testimonial" key={t.name}>
+                <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+                <figcaption>
+                  <strong>{t.name}</strong>
+                  <span>{t.business}</span>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </section>
@@ -213,6 +258,20 @@ export default function Page() {
             <a className="btn solid" href="/products">View all products</a>
             <a className="btn ghost" href={makeWhatsAppUrl('Hi, share full product catalog and pricing for Boxify Fashion.')}>WhatsApp catalog</a>
           </div>
+          <div className="category-links" aria-label="Browse by category">
+            <a href="/track-pants-manufacturer">Track Pants manufacturer</a>
+            <a href="/joggers-manufacturer">Joggers manufacturer</a>
+            <a href="/cargo-pants-manufacturer">Cargo Pants manufacturer</a>
+            <a href="/custom-teamwear">Custom Teamwear</a>
+          </div>
+        </section>
+
+        <section className="grid" id="catalog" aria-labelledby="catalog-heading" data-reveal>
+          <div className="section-header">
+            <h2 id="catalog-heading">Download the full catalog</h2>
+            <p>Full article list, fabrics, GSM and pricing bands in one PDF.</p>
+          </div>
+          <CatalogLead />
         </section>
 
         <section className="grid" id="process" aria-labelledby="process-heading" data-reveal>
@@ -265,6 +324,35 @@ export default function Page() {
               <p>Founder, Boxify Fashion — leads production and delivery, from fabric selection and cutting accuracy to QC and on-time dispatch for every lot.</p>
             </div>
           </div>
+        </section>
+
+        <section className="grid" id="faq" aria-labelledby="faq-heading" data-reveal>
+          <div className="section-header">
+            <h2 id="faq-heading">Frequently asked questions</h2>
+            <p>MOQ, lead times, fabrics, samples, branding and payment terms.</p>
+          </div>
+          <div className="faq-list">
+            {faqs.map((item) => (
+              <details className="faq-item" key={item.q}>
+                <summary>{item.q}</summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: faqs.map((item) => ({
+                  '@type': 'Question',
+                  name: item.q,
+                  acceptedAnswer: { '@type': 'Answer', text: item.a },
+                })),
+              }),
+            }}
+          />
         </section>
 
         <section className="cta-wide" id="contact">

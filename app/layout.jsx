@@ -7,6 +7,7 @@ import { ProfileProvider } from './profile-provider';
 import NamePrompt from './name-prompt';
 import ProfileIcon from './profile-icon';
 import NavToggle from './nav-toggle';
+import WhatsappFab from './whatsapp-fab';
 
 const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
@@ -32,7 +33,10 @@ const makeWhatsAppUrl = (text) =>
 
 export const metadata = {
   metadataBase: new URL('https://boxifyfashion.com'),
-  title: 'Boxify Fashion | Wholesale Wear Manufacturer',
+  title: {
+    default: 'Boxify Fashion | Wholesale Wear Manufacturer',
+    template: '%s | Boxify Fashion',
+  },
   description:
     'Boxify — Quality & casuals manufacturer producing premium track pants, t-shirts, joggers, jackets, and custom teamwear. Custom orders, bulk pricing, fast delivery.',
   openGraph: {
@@ -63,6 +67,41 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Boxify Fashion',
+              url: 'https://boxifyfashion.com',
+              logo: 'https://boxifyfashion.com/logo-2026.png',
+              description:
+                'B2B wholesale wear manufacturer with in-house cutting, stitching, branding and packing. 30,000+ units/month capacity.',
+              email: 'info@boxifyfashion.com',
+              foundingDate: '2018',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Shop No. 69, Ganpati Colony, 70/71, Barwala Rd, Agroha',
+                addressLocality: 'Agroha',
+                addressRegion: 'Haryana',
+                postalCode: '125047',
+                addressCountry: 'IN',
+              },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+91-9817197390',
+                contactType: 'sales',
+                availableLanguage: ['en', 'hi'],
+              },
+              sameAs: [
+                'https://www.instagram.com/boxifyfashion',
+                'https://www.facebook.com/boxifyfashion',
+                'https://www.youtube.com/@boxifyfashion',
+              ],
+            }),
+          }}
+        />
         <ProfileProvider>
           <CartProvider>
             <SplashProvider>
@@ -72,6 +111,8 @@ export default function RootLayout({ children }) {
                 <nav className="nav desktop-nav">
                   <Link href="/">Home</Link>
                   <Link href="/products">Products</Link>
+                  <Link href="/quote">Get a Quote</Link>
+                  <Link href="/blog">Blog</Link>
                   <Link href="/about">About</Link>
                   <Link href="/contact">Contact</Link>
                 </nav>
@@ -101,6 +142,18 @@ export default function RootLayout({ children }) {
                     </ul>
                   </div>
                   <div>
+                    <h4>Categories</h4>
+                    <ul>
+                      <li><Link href="/track-pants-manufacturer">Track Pants Manufacturer</Link></li>
+                      <li><Link href="/joggers-manufacturer">Joggers Manufacturer</Link></li>
+                      <li><Link href="/cargo-pants-manufacturer">Cargo Pants Manufacturer</Link></li>
+                      <li><Link href="/custom-teamwear">Custom Teamwear</Link></li>
+                      <li><Link href="/quote">Get a Quote</Link></li>
+                      <li><Link href="/sample">Request Samples</Link></li>
+                      <li><Link href="/blog">Blog</Link></li>
+                    </ul>
+                  </div>
+                  <div>
                     <h4>Social</h4>
                     <ul>
                       {socials.map((s) => (
@@ -126,6 +179,7 @@ export default function RootLayout({ children }) {
                 <div className="footer-bottom">© 2026 Boxify Fashion. All rights reserved.</div>
               </footer>
             </div>
+            <WhatsappFab />
             <NamePrompt />
           </SplashProvider>
         </CartProvider>

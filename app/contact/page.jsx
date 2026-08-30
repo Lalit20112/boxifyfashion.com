@@ -3,6 +3,20 @@ const email = 'info@boxifyfashion.com';
 const makeWhatsAppUrl = (text) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 
+export const metadata = {
+  title: 'Contact & Wholesale Enquiries',
+  description:
+    'Get wholesale pricing and lead times from Boxify Fashion. WhatsApp +91 9817197390 or email info@boxifyfashion.com. MOQ 10, custom branding and bulk dispatch.',
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact & Wholesale Enquiries | Boxify Fashion',
+    description:
+      'Get wholesale pricing and lead times. WhatsApp +91 9817197390 or email info@boxifyfashion.com. MOQ 10.',
+    url: 'https://boxifyfashion.com/contact',
+    images: ['/images/art-203.jpeg'],
+  },
+};
+
 const socialIcons = {
   Instagram: (
     <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm11.25 1.25a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 8.5A3.5 3.5 0 1 1 8.5 12A3.5 3.5 0 0 1 12 8.5zm0 2a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 12 10.5z"/></svg>

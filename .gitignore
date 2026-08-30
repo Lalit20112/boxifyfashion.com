@@ -13,6 +13,9 @@ dist-ssr
 .next/
 *.local
 
+# Local lead capture store (dev only)
+/data/leads.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -2,80 +2,12 @@
 import { useState } from 'react';
 import { useCart } from '../cart-provider';
 import { useProfile } from '../profile-provider';
+import { products } from '../products-data';
 
 const whatsappNumber = '9817197390';
 const email = 'info@boxifyfashion.com';
 const makeWhatsAppUrl = (text) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-
-const products = [
-  {
-    id: 1,
-    name: 'Premium Cargo Pants',
-    category: 'Cargo Pants',
-    article: '10086',
-    fabric: 'Nylon Crush Lycra Terry',
-    price: 450,
-    image: '/images/art-201.jpeg',
-    colors: ['Black', 'Grey', 'Khaki', 'Olive'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
-  },
-  {
-    id: 2,
-    name: 'Casual Jogger Pants',
-    category: 'Casual Pants',
-    article: '10075',
-    fabric: 'Bubble Crush',
-    price: 420,
-    image: '/images/artical-205.jpeg',
-    colors: ['Grey', 'Green', 'Black', 'Brown'],
-    sizes: ['M', 'L', 'XL', 'XXL'],
-  },
-  {
-    id: 3,
-    name: 'Cotton Twill Cargo',
-    category: 'Cargo Pants',
-    article: '10046',
-    fabric: 'Cotton Twill',
-    price: 380,
-    image: '/images/art4.jpeg',
-    colors: ['Khaki', 'Camel', 'Brown', 'Black'],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-  },
-  {
-    id: 4,
-    name: 'Nylon Cargo Joggers',
-    category: 'Casual Pants',
-    article: '10005',
-    fabric: 'Nylon Crush',
-    price: 400,
-    image: '/images/art-202.jpeg',
-    colors: ['Grey', 'Khaki', 'Black', 'Brown'],
-    sizes: ['M', 'L', 'XL'],
-  },
-  {
-    id: 5,
-    name: 'Premium Nylon Pant',
-    category: 'Casual Pants',
-    article: '10004',
-    fabric: 'Nylon Crush',
-    price: 440,
-    image: '/images/art-203.jpeg',
-    colors: ['Black', 'Grey', 'Brown', 'Olive', 'Camel', 'Sky'],
-    sizes: ['M', 'L', 'XL', 'XXL', '3XL'],
-  },
-  {
-    id: 6,
-    name: 'Heavy Lycra Collection',
-    category: 'Heavy Lycra',
-    article: '10000',
-    fabric: 'Heavy Lycra',
-    price: 550,
-    image: '/images/artical-6.png',
-    colors: ['Black', 'Grey'],
-    sizes: ['30', '32', '34', '36', '38', '40', '42', '44'],
-  },
-];
 
 export default function ProductsPage() {
   const [selected, setSelected] = useState(null);
@@ -113,6 +45,35 @@ export default function ProductsPage() {
 
   return (
     <main className="products-page" style={{ padding: '1.5rem', display: 'grid', gap: '1.25rem' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            itemListElement: products.map((p, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              item: {
+                '@type': 'Product',
+                name: p.name,
+                sku: p.article,
+                category: p.category,
+                material: p.fabric,
+                image: `https://boxifyfashion.com${p.image}`,
+                brand: { '@type': 'Brand', name: 'Boxify Fashion' },
+                offers: {
+                  '@type': 'Offer',
+                  priceCurrency: 'INR',
+                  price: p.price,
+                  availability: 'https://schema.org/InStock',
+                  seller: { '@type': 'Organization', name: 'Boxify Fashion' },
+                },
+              },
+            })),
+          }),
+        }}
+      />
       <section className="grid">
         <div className="section-header">
           <h1>Products</h1>
@@ -137,7 +98,12 @@ export default function ProductsPage() {
               <div className="product-body">
                 <p className="pill subtle">{p.category}</p>
                 <h3>{p.name}</h3>
-                <p className="muted">Article {p.article} · {p.fabric}</p>
+                <p className="muted">Article {p.article} · {p.fabric} · {p.gsm} GSM</p>
+                <p className="product-desc">{p.description}</p>
+                <dl className="product-specs">
+                  <div><dt>Best for</dt><dd>{p.useCase}</dd></div>
+                  <div><dt>Care</dt><dd>{p.care}</dd></div>
+                </dl>
                 <div className="chip-row">
                   <div>
                     <p className="muted" style={{ marginBottom: '0.35rem' }}>Color</p>
@@ -210,7 +176,12 @@ export default function ProductsPage() {
               <div className="modal-info">
                 <p className="pill subtle">{selected.category}</p>
                 <h3>{selected.name}</h3>
-                <p className="muted">Article {selected.article} · {selected.fabric}</p>
+                <p className="muted">Article {selected.article} · {selected.fabric} · {selected.gsm} GSM</p>
+                <p className="product-desc">{selected.description}</p>
+                <dl className="product-specs">
+                  <div><dt>Best for</dt><dd>{selected.useCase}</dd></div>
+                  <div><dt>Care</dt><dd>{selected.care}</dd></div>
+                </dl>
                 <div className="chip-row">
                   <div>
                     <p className="muted" style={{ marginBottom: '0.35rem' }}>Color</p>

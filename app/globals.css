@@ -1558,3 +1558,356 @@ main {
   }
 }
 
+
+/* --- Capacity stat band (homepage) --- */
+.capacity-band {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  margin: 1.25rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.capacity-stat {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+.capacity-number {
+  font-size: clamp(2.75rem, 6vw, 4.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.capacity-label {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 0.35rem;
+}
+.capacity-support {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+.capacity-support div {
+  display: flex;
+  flex-direction: column;
+}
+.capacity-support strong {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.capacity-support span {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* --- FAQ (homepage) --- */
+.faq-list {
+  display: grid;
+  gap: 0.6rem;
+}
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  padding: 0.9rem 1.1rem;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: '+';
+  float: right;
+  font-weight: 400;
+  color: var(--muted);
+}
+.faq-item[open] summary::after {
+  content: '\2013';
+}
+.faq-item p {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* --- Trust section (logos + testimonials) --- */
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+.logo-chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--bg);
+  letter-spacing: 0.02em;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.testimonial {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.testimonial blockquote {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.55;
+}
+.testimonial figcaption {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+.testimonial figcaption strong { color: var(--primary); }
+.testimonial figcaption span { color: var(--muted); }
+
+/* --- Internal category links --- */
+.category-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin-top: 1rem;
+}
+.category-links a {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.category-links a:hover { border-color: var(--secondary); }
+
+/* --- Catalog lead form --- */
+.catalog-form {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 520px;
+}
+.catalog-form label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.catalog-form input {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--card);
+}
+.catalog-error { color: var(--accent); font-size: 0.88rem; margin: 0; }
+.catalog-done { display: grid; gap: 0.9rem; }
+
+/* --- Product depth on cards --- */
+.product-desc {
+  margin: 0.5rem 0 0;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.product-specs {
+  margin: 0.6rem 0 0;
+  display: grid;
+  gap: 0.4rem;
+}
+.product-specs div { display: grid; gap: 0.1rem; }
+.product-specs dt {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.product-specs dd {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+/* --- Article / blog / breadcrumbs --- */
+.crumbs { font-size: 0.85rem; color: var(--muted); }
+.crumbs a { color: var(--secondary); text-decoration: none; }
+.crumbs span { margin: 0 0.15rem; }
+.article-body { display: grid; gap: 1.25rem; }
+.article-body h2 { color: var(--primary); margin: 0 0 0.4rem; }
+.article-body p { margin: 0; line-height: 1.65; color: var(--text); }
+.article-body ul { margin: 0.3rem 0 0 1.1rem; line-height: 1.7; }
+.article-body a { color: var(--secondary); }
+.blog-list { display: grid; gap: 1rem; }
+.blog-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  padding: 1.2rem 1.3rem;
+  display: grid;
+  gap: 0.4rem;
+}
+.blog-card h2 { margin: 0; }
+.blog-card h2 a { color: var(--primary); text-decoration: none; }
+.blog-card h2 a:hover { color: var(--secondary); }
+
+/* --- Floating WhatsApp button --- */
+.whatsapp-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: #0b2e13;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+.whatsapp-fab:hover { filter: brightness(1.05); }
+.whatsapp-fab svg { display: block; }
+@media (max-width: 560px) {
+  .whatsapp-fab span { display: none; }
+  .whatsapp-fab { padding: 0.8rem; }
+}
+
+/* --- Quote / RFQ tool --- */
+.quote-grid { display: grid; gap: 0.8rem; }
+.quote-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  padding: 0.9rem;
+}
+.quote-thumb {
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  min-height: 96px;
+}
+.quote-info h3 { margin: 0 0 0.15rem; }
+.quote-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+.quote-controls label,
+.quote-contact-grid label {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.quote-controls input,
+.quote-controls select,
+.quote-contact-grid input {
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 0.45rem 0.55rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+}
+.quote-controls input[type='number'] { width: 90px; }
+.quote-summary { position: sticky; bottom: 0; }
+.quote-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.quote-lines li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 0.35rem;
+}
+.quote-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 2px solid var(--border);
+}
+.quote-total strong { font-size: 1.35rem; color: var(--primary); }
+.quote-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.quote-sent { color: #1a7f37; font-weight: 600; margin: 0; }
+
+/* --- Sample request --- */
+.sample-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+.sample-card {
+  display: grid;
+  grid-template-columns: auto 56px 1fr;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  padding: 0.7rem;
+  cursor: pointer;
+}
+.sample-card.on { border-color: var(--secondary); box-shadow: 0 0 0 2px rgba(44, 90, 160, 0.15); }
+.sample-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+}
+.sample-card h3 { margin: 0; font-size: 0.98rem; }
+
+/* --- Leads viewer --- */
+.leads-table-wrap { overflow-x: auto; }
+.leads-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+.leads-table th,
+.leads-table td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+.leads-table th { background: var(--bg); }
+.leads-payload {
+  margin: 0.3rem 0 0;
+  font-size: 0.78rem;
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 0.4rem;
+  white-space: pre-wrap;
+}

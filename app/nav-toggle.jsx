@@ -8,6 +8,9 @@ export default function NavToggle() {
   const links = [
     { href: '/', label: 'Home' },
     { href: '/products', label: 'Products' },
+    { href: '/quote', label: 'Get a Quote' },
+    { href: '/sample', label: 'Request Samples' },
+    { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ];

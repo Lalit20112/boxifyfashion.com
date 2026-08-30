@@ -1,3 +1,17 @@
+export const metadata = {
+  title: 'About Our Factory',
+  description:
+    'Boxify Fashion is a B2B-first apparel manufacturer running its own cutting, stitching, branding and finishing floor since 2018, with 30,000+ units/month capacity.',
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About Our Factory | Boxify Fashion',
+    description:
+      'A B2B-first apparel manufacturer running its own cutting, stitching, branding and finishing floor since 2018.',
+    url: 'https://boxifyfashion.com/about',
+    images: ['/images/about1.jpg'],
+  },
+};
+
 const values = [
   {
     title: 'Quality Assurance',
@@ -24,17 +38,16 @@ const timeline = [
   { year: '2024', text: 'Serving global B2B buyers with custom branding and rapid lead times.' },
 ];
 
+// TODO: drop real factory clips into /public/videos and point these back at them.
 const gallery = [
-  { type: 'video', src: '/videos/video1.mov', alt: 'Factory video 1' },
+  { type: 'video', src: '/images/boxy3.mp4', alt: 'Factory floor clip' },
   { type: 'image', src: '/images/about1.jpg', alt: 'Stitching closeup' },
   { type: 'image', src: '/images/about2.jpg', alt: 'Machine detail' },
   { type: 'image', src: '/images/about3.jpg', alt: 'Cutting floor' },
-  { type: 'video', src: '/videos/video2.mov', alt: 'Factory video 2' },
-  { type: 'image', src: '/images/about1.jpg', alt: 'Stitching repeat' },
-  { type: 'video', src: '/videos/video3.mov', alt: 'Factory video 3' },
-  { type: 'image', src: '/images/about2.jpg', alt: 'Machine repeat' },
-  { type: 'image', src: '/images/about3.jpg', alt: 'Cutting repeat' },
-  { type: 'video', src: '/videos/video1.mov', alt: 'Factory video 1 repeat' },
+  { type: 'image', src: '/images/about1.jpg', alt: 'Stitching line' },
+  { type: 'image', src: '/images/about2.jpg', alt: 'Machine detail' },
+  { type: 'image', src: '/images/about3.jpg', alt: 'Cutting floor' },
+  { type: 'image', src: '/images/owner.jpg', alt: 'On the floor' },
 ];
 
 const ownerHistory = [
@@ -113,7 +126,7 @@ export default function AboutPage() {
               ) : (
                 <div className="video-card">
                   <video controls muted playsInline preload="metadata" poster={gallery.find((g) => g.type === 'image')?.src || ''}>
-                    <source src={item.src} type="video/quicktime" />
+                    <source src={item.src} type="video/mp4" />
                     Your browser may not support this video.
                   </video>
                 </div>
